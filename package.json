@@ -1,7 +1,7 @@
 {
-  "name": "with-hook",
-  "version": "0.0.1",
-  "description": "Use React hooks with your class components",
+  "name": "hook-hoc",
+  "version": "0.0.2",
+  "description": "Use React hooks with your class components by Higher Order Component",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
   "module": "lib/index.js",
@@ -41,13 +41,13 @@
   ],
   "author": "Nathaniel Tucker <me@ntucker.me> (https://github.com/ntucker)",
   "license": "Apache-2.0",
-  "homepage": "https://resthooks.io",
+  "homepage": "https://github.com/ntucker/hook-hoc",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:coinbase/rest-hooks.git"
+    "url": "git+ssh://git@github.com:ntucker/hook-hoc.git"
   },
   "bugs": {
-    "url": "https://github.com/coinbase/issues"
+    "url": "https://github.com/ntucker/hook-hoc/issues"
   },
   "auto-changelog": {
     "template": "./scripts/changelog.hbs",
