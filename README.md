@@ -25,8 +25,8 @@ import { useResource } from 'rest-hooks';
 import UserResource from 'resources/user';
 
 const useProfile = ({ id }: { id: number }) => {
-  const user = useResource(UserResource.singleRequest(), { id });
-  const friends = useResource(UserResource.listRequest(), { id });
+  const user = useResource(UserResource.detailShape(), { id });
+  const friends = useResource(UserResource.listShape(), { id });
   return { user, friends };
 }
 
