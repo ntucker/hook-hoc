@@ -1,6 +1,6 @@
 {
   "name": "hook-hoc",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Use React hooks with your class components by Higher Order Component",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
