@@ -6,7 +6,7 @@ type Diff<T, U> = T extends U ? never : T;
 export default function withHooks<T extends object, P extends object>(
   use: (props: P) => T,
 ) {
-  return <Props extends T & P>(Component: React.ComponentClass<Props>) => {
+  return <Props extends T & P>(Component: React.ComponentType<Props>) => {
     const WrappedComponent = hoistStatics(
       React.forwardRef((props: Diff<Props, T>, ref) => {
         const hookProps = use(props);
