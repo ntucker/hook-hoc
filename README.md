@@ -1,8 +1,7 @@
 # Hook HOC
 
-<!-- [![CircleCI](https://circleci.com/gh/ntucker/hook-hoc.svg?style=shield)](https://circleci.com/gh/ntucker/hook-hoc)
+[![CircleCI](https://circleci.com/gh/ntucker/hook-hoc.svg?style=shield)](https://circleci.com/gh/ntucker/hook-hoc)
 [![Coverage Status](https://img.shields.io/coveralls/ntucker/hook-hoc.svg?style=flat-square)](https://coveralls.io/github/ntucker/hook-hoc?branch=master)
--->
 [![npm downloads](https://img.shields.io/npm/dm/hook-hoc.svg?style=flat-square)](https://www.npmjs.com/package/hook-hoc)
 [![gzip size](https://img.badgesize.io/https://unpkg.com/hook-hoc?compression=gzip&style=flat-square)](https://unpkg.com/hook-hoc)
 [![npm version](https://img.shields.io/npm/v/hook-hoc.svg?style=flat-square)](https://www.npmjs.com/package/hook-hoc)
