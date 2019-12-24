@@ -41,7 +41,7 @@
   ],
   "author": "Nathaniel Tucker <me@ntucker.me> (https://github.com/ntucker)",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/ntucker/hook-hoc",
+  "homepage": "https://github.com/ntucker/hook-hoc#readme",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:ntucker/hook-hoc.git"
@@ -51,7 +51,7 @@
   },
   "auto-changelog": {
     "template": "./scripts/changelog.hbs",
-    "breakingPattern": "\\[breaking\\]",
+    "breakingPattern": "breaking:",
     "unreleased": true,
     "commitLimit": false,
     "handlebarsSetup": "./scripts/changelogSetup.js"
