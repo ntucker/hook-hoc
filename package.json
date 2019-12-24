@@ -111,9 +111,10 @@
     "hoist-non-react-statics": "^3.3.1"
   },
   "browserslist": [
-    "last 2 versions",
-    "not op_mini all",
+    "> 1%",
+    "Firefox ESR",
+    "not dead",
     "not ie<12",
-    "not <1%"
+    "not OperaMini all"
   ]
 }
