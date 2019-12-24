@@ -8,6 +8,7 @@ export default function withHooks<T extends object, P extends object>(
 ) {
   return <Props extends T & P>(Component: React.ComponentType<Props>) => {
     const WrappedComponent = hoistStatics(
+      // eslint-disable-next-line react/display-name
       React.forwardRef((props: Diff<Props, T>, ref) => {
         const hookProps = use(props);
         return <Component {...props} {...hookProps} ref={ref} />;
