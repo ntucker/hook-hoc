@@ -36,6 +36,10 @@
     "typescript",
     "hook",
     "class",
+    "component",
+    "withHook",
+    "higher order component",
+    "hoc",
     "bridge",
     "adapter"
   ],
