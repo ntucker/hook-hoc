@@ -10,6 +10,7 @@ describe('withHooks()', () => {
     const withNothing = withHooks(() => ({}));
     expect(typeof withNothing).toBe('function');
   });
+
   it('should run hook onmount', () => {
     const tracker = jest.fn();
     const withOnMount = withHooks(() => {
@@ -24,6 +25,7 @@ describe('withHooks()', () => {
     rerender(<Wrapped />);
     expect(tracker).toBeCalledTimes(1);
   });
+
   it('should receive injected props', () => {
     const withOnMount = withHooks(() => {
       return { injected: 5 };
@@ -34,5 +36,21 @@ describe('withHooks()', () => {
     const Wrapped = withOnMount(MyComponent);
     const { getByText } = render(<Wrapped />);
     expect(getByText('5 is the')).toBeDefined();
+  });
+
+  it('should work with provided props', () => {
+    const withOnMount = withHooks(({ id }: { id: number }) => {
+      return { injected: 5 + id };
+    });
+    const MyComponent = ({
+      injected,
+    }: {
+      injected: number;
+      id: number;
+      extraprop?: string;
+    }) => <div>{injected} is the</div>;
+    const Wrapped = withOnMount(MyComponent);
+    const { getByText } = render(<Wrapped id={2} />);
+    expect(getByText('7 is the')).toBeDefined();
   });
 });
