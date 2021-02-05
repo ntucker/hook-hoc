@@ -16,9 +16,9 @@ export default function withHooks<
       }),
       Component,
     );
-    WrappedComponent.displayName = `withHook(${
-      use.name
-    })(${Component.displayName || Component.name})`;
+    WrappedComponent.displayName = `withHook(${use.name})(${
+      Component.displayName || Component.name
+    })`;
     return WrappedComponent;
   };
 }
