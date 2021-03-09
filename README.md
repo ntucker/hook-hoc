@@ -1,4 +1,4 @@
-# Hook HOC
+# Hook Higher Order Component (HOC)
 
 [![CircleCI](https://circleci.com/gh/ntucker/hook-hoc.svg?style=shield)](https://circleci.com/gh/ntucker/hook-hoc)
 [![Coverage Status](https://img.shields.io/coveralls/ntucker/hook-hoc.svg?style=flat-square)](https://coveralls.io/github/ntucker/hook-hoc?branch=master)
