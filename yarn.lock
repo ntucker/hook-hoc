@@ -40,9 +40,9 @@
     stable "^0.1.8"
 
 "@anansi/eslint-plugin@^0.11.0":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@anansi/eslint-plugin/-/eslint-plugin-0.11.2.tgz#037c3424d40861c13f26de496a2b4802d84cd069"
-  integrity sha512-iI9g6H85i6oAFl8zQdXysJZ2RAmKjdWPah3i+LfGWTcfbfQq7GTWlz5cG9y5wCbvHg6n9bHqP5HULeHrDbhS9Q==
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@anansi/eslint-plugin/-/eslint-plugin-0.11.3.tgz#40b50594da68693cf835f4175ef4b6dfef6010ba"
+  integrity sha512-vdwXJtfQk15NH75hWBWemOjJ/C73g1G0RcOBFAJi9Piw3ib/iI/1gtCmRlH49+CmJe7FRSYk9Zhzi9joOFI1qg==
   dependencies:
     "@babel/eslint-parser" "^7.13.14"
     "@typescript-eslint/eslint-plugin" "^4.22.1"
