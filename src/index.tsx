@@ -3,7 +3,7 @@ import hoistStatics from 'hoist-non-react-statics';
 
 export default function withHooks<
   T extends Record<string, any>,
-  P extends Record<string, any>
+  P extends Record<string, any>,
 >(use: (props: P) => T) {
   return <Props extends T & P>(
     Component: React.JSXElementConstructor<Props> & React.ComponentType<Props>,
