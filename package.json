@@ -120,6 +120,7 @@
   },
   "browserslist": [
     "> 1%",
+    "since 2018",
     "Firefox ESR",
     "not dead",
     "not ie<12",
