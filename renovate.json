@@ -1,0 +1,59 @@
+{
+  "extends": ["group:allNonMajor", "group:monorepos"],
+  "assigneesFromCodeOwners": true,
+  "commitMessagePrefix": "pkg: ",
+  "commitMessageTopic": "`{{depName}}`",
+  "dependencyDashboardApproval": true,
+  "rangeStrategy": "auto",
+  "ignoreDeps": ["whatwg-fetch", "react-error-overlay", "msw"],
+  "timezone": "America/Chicago",
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["@babel/runtime", "core-js", "core-js-compat"],
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "replace"
+    },
+    {
+      "extends": ["monorepo:react"],
+      "matchPackageNames": ["@types/react", "@types/react-dom"],
+      "groupName": "react"
+    },
+    {
+      "matchPackageNames": ["@anansi/webpack-config"],
+      "matchPackagePrefixes": ["@linaria", "webpack"],
+      "matchSourceUrlPrefixes": [
+        "https://github.com/webpack",
+        "https://github.com/callstack/linaria"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "groupSlug": "webpack",
+      "groupName": "webpack packages"
+    },
+    {
+      "extends": ["monorepo:babel"],
+      "matchPackageNames": [
+        "@anansi/babel-config",
+        "core-js",
+        "core-js-compat"
+      ],
+      "groupName": "babel packages"
+    },
+    {
+      "extends": ["packages:jsTest"],
+      "matchPackageNames": ["@anansi/jest-preset"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "JS test packages"
+    },
+    {
+      "extends": ["packages:linters"],
+      "groupName": "linters",
+      "matchPackageNames": [
+        "@anansi/eslint-plugin",
+        "prettier",
+        "eslint-plugin-prettier",
+        "@typescript-eslint/eslint-plugin"
+      ]
+    }
+  ]
+}
