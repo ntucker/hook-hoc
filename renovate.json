@@ -1,5 +1,6 @@
 {
-  "extends": ["group:allNonMajor", "group:monorepos"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["group:allNonMajor"],
   "assigneesFromCodeOwners": true,
   "commitMessagePrefix": "pkg: ",
   "commitMessageTopic": "`{{depName}}`",
@@ -26,17 +27,26 @@
         "https://github.com/webpack",
         "https://github.com/callstack/linaria"
       ],
-      "matchUpdateTypes": ["major", "minor", "patch"],
+      "separateMultipleMajor": false,
       "groupSlug": "webpack",
       "groupName": "webpack packages"
     },
     {
-      "extends": ["monorepo:babel"],
+      "matchSourceUrlPrefixes": [
+        "https://github.com/babel/babel"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "groupSlug": "babel",
+      "groupName": "babel packages"
+    },
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchPackageNames": [
-        "@anansi/babel-config",
+        "@anansi/babel-preset",
         "core-js",
         "core-js-compat"
       ],
+      "groupSlug": "babel",
       "groupName": "babel packages"
     },
     {
