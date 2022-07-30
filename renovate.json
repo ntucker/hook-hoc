@@ -8,6 +8,11 @@
   "rangeStrategy": "auto",
   "ignoreDeps": ["whatwg-fetch", "react-error-overlay", "msw"],
   "timezone": "America/Chicago",
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "dependencyDashboardApproval": false,
+    "assignees": ["@ntucker"]
+  },
   "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {
