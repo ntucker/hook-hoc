@@ -62,7 +62,7 @@
       "groupName": "JS test packages"
     },
     {
-      "matchPackageNames": ["@anansi/jest-preset"],
+      "matchPackageNames": ["@anansi/jest-preset", "babel-jest"],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "groupName": "JS test packages"
     },
