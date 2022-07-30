@@ -42,12 +42,12 @@
     },
     {
       "extends": ["monorepo:babel"],
-      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchUpdateTypes": ["major", "minor", "patch", "lockFileMaintenance"],
       "groupSlug": "babel",
       "groupName": "babel packages"
     },
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchUpdateTypes": ["major", "minor", "patch", "lockFileMaintenance"],
       "matchPackageNames": [
         "@anansi/babel-preset",
         "core-js",
