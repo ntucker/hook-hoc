@@ -117,7 +117,7 @@
     }
   },
   "dependencies": {
-    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/hoist-non-react-statics": "^3.3.2",
     "hoist-non-react-statics": "^3.3.2"
   },
   "browserslist": [
