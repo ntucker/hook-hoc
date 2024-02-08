@@ -10,26 +10,22 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@anansi/babel-preset@4.5.4":
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/@anansi/babel-preset/-/babel-preset-4.5.4.tgz#a3e4df3e18ec12d6afd13c0f5e0851cc4c035028"
-  integrity sha512-TXzCM9HcR2BNf6+6FeS7NUmwE8ZCEju/rLX2vlCFmm0WXZDYhoidTSrObOKAnCbYdbmDEd4Q69c7Esupij7kOQ==
+"@anansi/babel-preset@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@anansi/babel-preset/-/babel-preset-5.0.2.tgz#a740d98b03397d32bc7fdcce7cdc95fb8fe89265"
+  integrity sha512-jLA8lHOXKerjGs+UwHPBHeWpOEqCZa/7YteNleaJurvNhHIkEdtRVN5a05vZ5jijxfljIhRZgNULlomYJYokIA==
   dependencies:
     "@anansi/ts-utils" "^0.3.6"
-    "@babel/plugin-proposal-decorators" "^7.23.7"
+    "@babel/plugin-proposal-decorators" "^7.23.9"
     "@babel/plugin-proposal-export-default-from" "^7.23.3"
     "@babel/plugin-proposal-record-and-tuple" "^7.23.3"
     "@babel/plugin-syntax-function-bind" "^7.23.3"
-    "@babel/plugin-transform-class-properties" "^7.23.3"
-    "@babel/plugin-transform-class-static-block" "^7.23.4"
-    "@babel/plugin-transform-flow-strip-types" "^7.23.3"
     "@babel/plugin-transform-object-assign" "^7.23.3"
-    "@babel/plugin-transform-private-methods" "^7.23.3"
     "@babel/plugin-transform-react-constant-elements" "^7.23.3"
     "@babel/plugin-transform-react-inline-elements" "^7.23.3"
-    "@babel/plugin-transform-runtime" "^7.23.7"
+    "@babel/plugin-transform-runtime" "^7.23.9"
     "@babel/plugin-transform-typescript" "^7.23.6"
-    "@babel/preset-env" "^7.23.8"
+    "@babel/preset-env" "^7.23.9"
     "@babel/preset-react" "^7.23.3"
     babel-plugin-macros "^3.1.0"
     babel-plugin-module-resolver "^5.0.0"
@@ -362,7 +358,7 @@
     "@babel/helper-environment-visitor" "^7.22.20"
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-proposal-decorators@^7.23.7":
+"@babel/plugin-proposal-decorators@^7.23.9":
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.23.9.tgz#126d947d62ee72022ec46813983c6dd861456fa3"
   integrity sha512-hJhBCb0+NnTWybvWq2WpbCYDOcflSbx0t+BYP65e5R9GVnukiDTi+on5bFkk4p7QGuv190H6KfNiV9Knf/3cZA==
@@ -449,13 +445,6 @@
   integrity sha512-MXf5laXo6c1IbEbegDmzGPwGNTsHZmEy6QGznu5Sh2UCWvueywb2ee+CCE4zQiZstxU9BMoQO9i6zUFSY0Kj0Q==
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
-
-"@babel/plugin-syntax-flow@^7.23.3":
-  version "7.23.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.23.3.tgz#084564e0f3cc21ea6c70c44cff984a1c0509729a"
-  integrity sha512-YZiAIpkJAwQXBJLIQbRFayR5c+gJ35Vcz3bg954k7cd73zqjvhacJuL9RbrzPz8qPmZdgqP6EUKwy0PCNhaaPA==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.22.5"
 
 "@babel/plugin-syntax-function-bind@^7.23.3":
   version "7.23.3"
@@ -701,14 +690,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
     "@babel/plugin-syntax-export-namespace-from" "^7.8.3"
-
-"@babel/plugin-transform-flow-strip-types@^7.23.3":
-  version "7.23.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.23.3.tgz#cfa7ca159cc3306fab526fc67091556b51af26ff"
-  integrity sha512-26/pQTf9nQSNVJCrLB1IkHUKyPxR+lMrH2QDPG89+Znu9rAMbtrybdbWeE9bb7gzjmE5iXHEY+e0HUwM6Co93Q==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.22.5"
-    "@babel/plugin-syntax-flow" "^7.23.3"
 
 "@babel/plugin-transform-for-of@^7.23.6":
   version "7.23.6"
@@ -961,7 +942,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/plugin-transform-runtime@7.23.9", "@babel/plugin-transform-runtime@^7.23.7":
+"@babel/plugin-transform-runtime@7.23.9", "@babel/plugin-transform-runtime@^7.23.9":
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.23.9.tgz#2c64d0680fc8e09e1dfe8fd5c646fe72abd82004"
   integrity sha512-A7clW3a0aSjm3ONU9o2HAILSegJCYlEZmOhmBRReVtIpY/Z/p7yIZ+wR41Z+UipwdGuqwtID/V/dOdZXjwi9gQ==
@@ -1050,7 +1031,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.22.15"
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/preset-env@^7.23.8":
+"@babel/preset-env@^7.23.9":
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.23.9.tgz#beace3b7994560ed6bf78e4ae2073dff45387669"
   integrity sha512-3kBGTNBBk9DQiPoXYS0g0BYlwTQYUTifqgKTjxUwEUkduRT2QOa0FPGBJ+NROQhGyYO5BuTJwGvBnqKDykac6A==
