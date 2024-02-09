@@ -14,22 +14,22 @@
     "README.md"
   ],
   "scripts": {
-    "build:lib": "cross-env NODE_ENV=production BROWSERSLIST_ENV='2018' babel src --out-dir lib --source-maps inline --extensions '.ts,.tsx,.js' --ignore '**/__tests__/**' --ignore '**/*.d.ts'",
+    "build:lib": "NODE_ENV=production BROWSERSLIST_ENV='2018' babel src --out-dir lib --source-maps inline --extensions '.ts,.tsx,.js' --ignore '**/__tests__/**' --ignore '**/*.d.ts'",
     "build:types": "tsc --emitDeclarationOnly -p ./src",
-    "build:bundle": "npm run build:js:node && npm run build:js:browser",
+    "build:bundle": "run build:js:node && run build:js:browser",
     "build:js:node": "BROWSERSLIST_ENV=node12 rollup -c",
     "build:js:browser": "BROWSERSLIST_ENV=legacy rollup -c",
     "build:clean": "rimraf lib",
-    "build": "npm run build:lib && npm run build:types",
+    "build": "run build:lib && run build:types",
     "dev": "yarn run build:lib -w",
-    "prepare": "npm run build:clean && npm run build",
-    "prepublishOnly": "npm run build:bundle",
+    "prepare": "run build:clean && run build",
+    "prepack": "run prepare && run build:bundle",
     "lint": "eslint --ext .ts,.tsx",
     "format": "eslint --fix \"src/**/*.{js,ts,tsx}\"",
-    "test": "cross-env NODE_ENV=test jest",
-    "test:ci": "npm test -- --ci",
-    "test:watch": "npm test -- --watch",
-    "test:coverage": "npm test -- --coverage",
+    "test": "NODE_ENV=test jest",
+    "test:ci": "run test --ci",
+    "test:watch": "run test --watch",
+    "test:coverage": "run test --coverage",
     "changelog": "npx auto-changelog --stdout",
     "beforeStage": "npx auto-changelog -p && git add CHANGELOG.md"
   },
@@ -74,7 +74,6 @@
     "babel-plugin-root-import": "6.6.0",
     "coveralls": "3.1.1",
     "cpy-cli": "5.0.0",
-    "cross-env": "7.0.3",
     "eslint": "8.56.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "2.29.1",
@@ -135,5 +134,6 @@
     "github": {
       "release": true
     }
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
