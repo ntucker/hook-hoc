@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
 import { render } from '@testing-library/react';
+import { useEffect } from 'react';
 
 import withHooks from '../index';
 
