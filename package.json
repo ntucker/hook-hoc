@@ -126,5 +126,12 @@
     "not dead",
     "not ie<12",
     "not OperaMini all"
-  ]
+  ],
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "experimentalTernaries": true
+  }
 }
