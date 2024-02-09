@@ -53,21 +53,6 @@
   "bugs": {
     "url": "https://github.com/ntucker/hook-hoc/issues"
   },
-  "auto-changelog": {
-    "template": "./scripts/changelog.hbs",
-    "breakingPattern": "breaking:",
-    "unreleased": true,
-    "commitLimit": false,
-    "handlebarsSetup": "./scripts/changelogSetup.js"
-  },
-  "git": {
-    "changelog": "npx auto-changelog --stdout"
-  },
-  "release-it": {
-    "github": {
-      "release": true
-    }
-  },
   "devDependencies": {
     "@anansi/babel-preset": "5.0.2",
     "@anansi/eslint-plugin": "0.16.48",
@@ -133,5 +118,20 @@
     "singleQuote": true,
     "arrowParens": "avoid",
     "experimentalTernaries": true
+  },
+  "auto-changelog": {
+    "template": "./scripts/changelog.hbs",
+    "breakingPattern": "breaking:",
+    "unreleased": true,
+    "commitLimit": false,
+    "handlebarsSetup": "./scripts/changelogSetup.js"
+  },
+  "git": {
+    "changelog": "npx auto-changelog --stdout"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
