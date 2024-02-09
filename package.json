@@ -14,10 +14,12 @@
     "README.md"
   ],
   "scripts": {
-    "build:lib": "cross-env NODE_ENV=production babel src --out-dir lib --source-maps inline --extensions '.ts,.tsx,.js' --ignore '**/__tests__/**' --ignore '**/*.d.ts'",
+    "build:lib": "cross-env NODE_ENV=production BROWSERSLIST_ENV='2018' babel src --out-dir lib --source-maps inline --extensions '.ts,.tsx,.js' --ignore '**/__tests__/**' --ignore '**/*.d.ts'",
     "build:types": "tsc --emitDeclarationOnly -p ./src",
-    "build:bundle": "rollup -c",
-    "build:clean": "rimraf lib",
+    "build:bundle": "npm run build:js:node && npm run build:js:browser",
+    "build:js:node": "BROWSERSLIST_ENV=node12 rollup -c",
+    "build:js:browser": "BROWSERSLIST_ENV=legacy rollup -c",
+    "build:clean": "rimraf lib dist",
     "build": "npm run build:lib && npm run build:types",
     "dev": "yarn run build:lib -w",
     "prepare": "npm run build:clean && npm run build",
@@ -53,8 +55,12 @@
   "bugs": {
     "url": "https://github.com/ntucker/hook-hoc/issues"
   },
+  "engines": {
+    "node": "^12.17 || ^13.7 || >=14"
+  },
   "devDependencies": {
     "@anansi/babel-preset": "5.0.2",
+    "@anansi/browserslist-config": "^1.5.0",
     "@anansi/eslint-plugin": "0.16.48",
     "@babel/cli": "7.23.9",
     "@babel/core": "7.23.9",
@@ -105,12 +111,7 @@
     "hoist-non-react-statics": "^3.3.2"
   },
   "browserslist": [
-    "> 1%",
-    "since 2018",
-    "Firefox ESR",
-    "not dead",
-    "not ie<12",
-    "not OperaMini all"
+    "extends @anansi/browserslist-config"
   ],
   "prettier": {
     "printWidth": 80,

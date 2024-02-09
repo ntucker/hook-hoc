@@ -8,7 +8,7 @@ import replace from 'rollup-plugin-replace';
 
 import pkg from './package.json';
 
-const extensions = ['.js', '.ts', '.tsx', '.mjs', '.json', '.node'];
+const extensions = ['.js', '.ts', '.tsx', '.mjs', '.json', '.node', '.jsx'];
 process.env.NODE_ENV = 'production';
 
 const dependencies = Object.keys(pkg.dependencies)
@@ -25,23 +25,24 @@ function isExternal(id) {
   return ret;
 }
 
-const plugins = [['@babel/plugin-transform-runtime', { useESModules: true }]];
+const plugins = [];
 const presets = [
   [
     '@anansi/babel-preset',
     {
-      typing: 'typescript',
       useBuiltIns: false,
     },
   ],
 ];
 
-export default [
+const configs = [];
+if (process.env.BROWSERSLIST_ENV !== 'node12') {
+
   // browser-friendly UMD build
-  {
+  configs.push({
     input: 'src/index.tsx',
     external: isExternal,
-    output: [{ file: pkg.unpkg, format: 'umd', name: 'restHook' }],
+    output: [{ file: pkg.unpkg, format: 'umd', name: 'hookHoc' }],
     plugins: [
       babel({
         exclude: ['node_modules/**', '**/__tests__/**'],
@@ -57,9 +58,10 @@ export default [
       terser({}),
       filesize(),
     ],
-  },
+  })
+} else {
   // node-friendly commonjs build
-  {
+  configs.push({
     input: 'src/index.tsx',
     external: isExternal,
     output: [{ file: pkg.main, format: 'cjs' }],
@@ -74,5 +76,6 @@ export default [
       resolve({ extensions }),
       commonjs({ extensions }),
     ],
-  },
-];
+  });
+}
+export default configs;
