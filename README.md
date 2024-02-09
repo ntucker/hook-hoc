@@ -16,19 +16,19 @@ Use React hooks with your class components by Higher Order Component.
 
 ## Data fetching Example
 
-Let's fetch some data using [Rest Hooks](https://resthooks.io). We use the provided id
+Let's fetch some data using [Reactive Data Client](https://dataclient.io). We use the provided id
 prop to know what to fetch, then inject `user` and `friends` by returning an object
 with those props.
 
 ```tsx
 import withHook from 'hook-hoc';
-import { useResource } from 'rest-hooks';
+import { useSuspense } from '@data-client/react';
 
-import UserResource from 'resources/user';
+import UserResource from 'resources/User';
 
 const useProfile = ({ id }: { id: number }) => {
-  const user = useResource(UserResource.detail(), { id });
-  const friends = useResource(UserResource.list(), { id });
+  const user = useSuspense(UserResource.get, { id });
+  const friends = useSuspense(UserResource.getList, { id });
   return { user, friends };
 };
 
