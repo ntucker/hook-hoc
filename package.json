@@ -59,11 +59,11 @@
     "node": "^12.17 || ^13.7 || >=14"
   },
   "devDependencies": {
-    "@anansi/babel-preset": "5.0.2",
+    "@anansi/babel-preset": "5.0.10",
     "@anansi/browserslist-config": "^1.5.0",
     "@anansi/eslint-plugin": "0.17.12",
-    "@babel/cli": "7.23.9",
-    "@babel/core": "7.23.9",
+    "@babel/cli": "7.24.7",
+    "@babel/core": "7.24.7",
     "@testing-library/react": "14.2.1",
     "@types/jest": "29.5.12",
     "@types/react": "18.2.55",
