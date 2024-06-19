@@ -5865,13 +5865,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ip@npm:^1.1.5":
-  version: 1.1.9
-  resolution: "ip@npm:1.1.9"
-  checksum: 10c0/5af58bfe2110c9978acfd77a2ffcdf9d33a6ce1c72f49edbaf16958f7a8eb979b5163e43bb18938caf3aaa55cdacde4e470874c58ca3b4b112ea7a30461a0c27
-  languageName: node
-  linkType: hard
-
 "ip@npm:^2.0.0":
   version: 2.0.0
   resolution: "ip@npm:2.0.0"
@@ -8922,13 +8915,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"smart-buffer@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "smart-buffer@npm:4.1.0"
-  checksum: 10c0/bd2f137a4c46ae4027292b6e7ae77ff2787cc3d03bef30b7f503247791f326a91865b75546246d313e5e1e2f0105dc405f6a4aaf7c8b69579c8d016b860ffd50
-  languageName: node
-  linkType: hard
-
 "smart-buffer@npm:^4.2.0":
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
@@ -8958,17 +8944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socks@npm:^2.3.3":
-  version: 2.5.1
-  resolution: "socks@npm:2.5.1"
-  dependencies:
-    ip: "npm:^1.1.5"
-    smart-buffer: "npm:^4.1.0"
-  checksum: 10c0/db7bb7072196b2233a80a706d0cb247341bc592f354073a3224a2d813b5dab0d73d3327247a094ccf61aa77ccf2186bec73d3b71ffb9f672563b726300156d39
-  languageName: node
-  linkType: hard
-
-"socks@npm:^2.7.1":
+"socks@npm:^2.3.3, socks@npm:^2.7.1":
   version: 2.7.1
   resolution: "socks@npm:2.7.1"
   dependencies:
