@@ -134,5 +134,5 @@
       "release": true
     }
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.5.1"
 }
